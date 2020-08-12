@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+}
+
+a:hover, a:link, a:visited {
+    text-decoration: none;
+    color: unset;
+}
+.front {
+    height: 100%;
+}
+
+#front_header {
+    height: 15%;
+    background-color: #c9c9c9;
+}
+
+#front_header div {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+#front_header div img {
+    display: block;
+    max-height: 100%;
+    margin: auto;  
+}
+
+#front_body {
+    height: 70%;
+    position: relative;
+    margin: 0;
+}
+
+.front_logo_left {
+    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    align-items: center;
+    top: 50%;
+    right: 50%;
+    height: 15%;
+    background-color:none;
+    -ms-transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    transform: translatey(-50%);
+    transition: 0.5s;  
+}
+.front_logo_left:hover {
+    height: 20%;
+    transition: 1s;
+}
+
+.front_logo_left:hover #barber_menu {
+    display: flex;
+    animation-name: menu_main;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.front_logo_right {
+    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    height: 15%;
+    background-color: none;
+    -ms-transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    transform: translatey(-50%);
+    transition: 0.5s;
+}
+
+.front_logo_right:hover {
+    height: 20%;
+    transition: 1s;
+}
+
+.front_logo_right:hover #tattoo_menu {
+    display: flex;
+    animation-name: menu_main;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menu_main {
+    from {opacity: 0;}
+    to {opacity: 0.9;}
+}
+
+#barber_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 25px;
+    margin-right: -10px;
+    
+}
+#barber_menu a {
+    display: block;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    opacity: 0.8;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+} 
+
+
+#barber_menu div:first-child a {
+    width: 120px;
+    border-bottom-right-radius: 50px;   
+
+}
+
+#barber_menu div:nth-child(2) a{
+    width: 90px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#barber_menu div:last-child a{
+    width: 120px;
+    border-top-right-radius: 50px;
+}
+
+
+#tattoo_menu {
+    display: none;
+    text-align: end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    font-size: 25px;
+    margin-left: -10px;
+    
+}
+
+#tattoo_menu a {
+    display: block;
+    padding: 5px;
+    padding-right: 10px;
+    background-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    opacity: 0.8;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} 
+
+
+#tattoo_menu div:first-child a {
+    width: 120px;
+    border-bottom-left-radius: 50px;   
+}
+
+#tattoo_menu div:nth-child(2) a {
+    width: 90px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#tattoo_menu div:last-child a {
+    width: 120px;
+    border-top-left-radius: 50px;
+}
+
+
+#image_left {
+    height: 100%;
+    box-shadow: inset 0px 0px 5px 4px grey;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;    
+    border-color: grey;
+}
+a:focus {
+    border: none;
+    outline: none;
+  }
+#image_left img {  
+    position: relative;
+    height: 100%;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    z-index: -2;
+}
+
+#image_right {
+    height: 100%;
+    box-shadow: inset 0px 0px 5px 4px grey;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    border-color: grey;     
+}
+
+
+#image_right img {
+    position: relative;
+    height: 100%;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    z-index: -1;
+}
+
+#vertical_bar {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    height: 100%;
+    width: 6px;
+    background-color: #292b2c;
+    box-shadow: inset 2px 0px 4px -2px white;
+    z-index: +1;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-top-style: none;
+    border-bottom-style: none;
+}
+
+#horizontal_bar {
+    position: absolute;
+    top: -6px;
+    height: 6px;
+    width: 100%;
+    background-color: #292b2c;
+    box-shadow: inset 0px 0px 4px -2px white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+
+#horizontal_bar2 {
+    position: absolute;
+    bottom: -6px;
+    height: 6px;
+    width: 100%;
+    background-color: #292b2c;
+    box-shadow: inset 0px 0px 4px -2px white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+
+#barber_vid {
+    position: absolute;
+    object-fit: fill;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+#tattoo_vid {
+    position: absolute;
+    object-fit: fill;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+footer {
+    display: flex;
+    height: 15%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c9c9c9;
+    font-size: 2vh;
+}
+
+footer div:nth-child(1) {
+    margin-left: 4vw;
+}
+footer div:nth-child(3) {
+    margin-right: 4vw;
+}
+#social_media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 18vw; 
+}
+
+#social_media div {
+    margin: 0;
+    width: 3vw;
+ 
+}
+#social_media div:hover img{
+    width: 3vw;    
+    opacity: 1;
+}
+#social_media img {
+    width: 2.5vw;
+    transition: 1s; 
+    opacity: 0.7;
+}
+
+footer div:nth-child(3) {
+    text-align: right;
+}
+
+footer div i {
+    display:block;
+}
+
+@media screen and (max-width:1919px){ 
+    html, body {
+    height: 100%;
+    min-height: 720px;
+    margin: 0;
+    }
+}
+
+@media screen and (min-width:1920px) {
+    html, body {
+    height: 100%;
+    max-height: 1040px;
+    margin: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+   #front_header {
+        height: 9%;
+    }
+    #front_header img{
+        height: 90%;
+    }
+    footer {
+        height: unset;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+    footer div {
+        width:100%;
+        margin: none;
+        text-align: left;
+        vertical-align: top;
+        justify-content: flex-start;
+        justify-items: left;
+    }
+    #social_media {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0; 
+   
+    }
+    #social_media div {
+        width: unset;
+        padding: 0;
+ 
+    }
+    footer div:nth-child(1) {
+        margin-left: unset;
+        padding: 2vh;
+
+    }
+    footer div:nth-child(3) {
+        margin-right: unset;
+        text-align: left;
+        padding: 2vh;
+    }
+    #social_media div:hover img{
+        width: 11vw;    
+        opacity: 1;
+    }
+    #social_media img {
+        margin: 0;
+        width: 10vw;
+        transition: 1s; 
+        opacity: 0.7;
+    }
+    #barber_vid {
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 50%;
+    }
+    #tattoo_vid {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 50%;
+    }
+    #vertical_bar {
+        top: 50%;
+        left: 0;
+        transform: translatey(-50%);
+        height: 6px;
+        width: 100%;
+    }
+    .front_logo_left {
+        top: 75%;
+        right: 0;
+        background-color:none;
+        -ms-transform: translatey(-50%);
+        -webkit-transform: translatey(-50%);
+        transform: translatey(-50%);
+    }
+    .front_logo_right {
+        top: 25%;
+        left: 0;
+        height: 15%;
+        -ms-transform: translatey(-50%);
+        -webkit-transform: translatey(-50%);
+        transform: translatey(-50%);
+        transition: 0.5s;
+    }
+    #tattoo_menu, #barber_menu{
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
